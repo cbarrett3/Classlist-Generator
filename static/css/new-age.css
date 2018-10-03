@@ -289,9 +289,7 @@ section.features .feature-item i {
 section.cta {
   position: relative;
   padding: 250px 0;
-  background-image: url("../img/off-white.png");
-  width: 2000px;
-  height: 2000px;
+  background-image: url("../img/bg-cta.jpg");
   background-position: center;
   background-size: cover;
 }

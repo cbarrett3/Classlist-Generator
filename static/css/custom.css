@@ -1,0 +1,23 @@
+#mainNav .navbar-nav > li > a.active {
+  color: #21fd02 !important;
+  background-color: transparent;
+}
+
+#mainNav .navbar-nav > li > a:focus:hover {
+  color: #21fd02;
+}
+#mainNav.navbar-shrink .navbar-nav > li > a:focus:hover {
+    color: #21fd02;
+}
+
+#mainNav.navbar-shrink .navbar-brand:hover, #mainNav.navbar-shrink .navbar-brand:focus {
+    color: #21fd02;
+}
+
+#mainNav .navbar-brand:hover, #mainNav .navbar-brand:focus {
+  color: #21fd02;
+}
+
+#mainNav .navbar-brand {
+  color: #21fd02;
+}
