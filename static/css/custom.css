@@ -1,23 +1,79 @@
+/*highlighted color of menu option when scrolled to that option*/
 #mainNav .navbar-nav > li > a.active {
-  color: #21fd02 !important;
+  color: #6359fd !important;
   background-color: transparent;
 }
 
+/*hover color of menu options on main page*/
+#mainNav .navbar-nav > li > a:hover,
 #mainNav .navbar-nav > li > a:focus:hover {
-  color: #21fd02;
-}
-#mainNav.navbar-shrink .navbar-nav > li > a:focus:hover {
-    color: #21fd02;
+  color: #ffffff;
+  background-color: transparent;
 }
 
-#mainNav.navbar-shrink .navbar-brand:hover, #mainNav.navbar-shrink .navbar-brand:focus {
-    color: #21fd02;
-}
-
+/*hover color of top page main logo top left*/
 #mainNav .navbar-brand:hover, #mainNav .navbar-brand:focus {
-  color: #21fd02;
+  color: #ffffff;
+  background-color: transparent;
 }
 
-#mainNav .navbar-brand {
-  color: #21fd02;
+/*main logo top left hover color on other pages*/
+#mainNav.navbar-shrink .navbar-brand:hover, #mainNav.navbar-shrink .navbar-brand:focus {
+    color: #6359fd;
 }
+
+#mainNav.navbar-shrink .navbar-nav > li > a:hover, #mainNav.navbar-shrink .navbar-nav > li > a:focus:hover {
+    color: #6359fd;
+  }
+
+/*top page main logo top left color*/
+#mainNav .navbar-brand {
+  color: #ceccd7;
+}
+
+section.cta {
+  position: relative;
+  padding: 250px 0;
+  background-image: url("../img/bright.jpg");
+}
+
+
+section h3 {
+  font-size: 40px;
+  color: white;
+}
+
+p {
+  color: white;
+}
+a:hover, a:focus {
+  color: #6359fd;
+}
+
+a {
+  color: #6359fd;
+  -webkit-transition: all .35s;
+  transition: all .35s;
+}
+
+
+.bg-primary {
+  background: #6359fd;
+  background: -webkit-gradient(linear, left top, left bottom, from(#6359fd), to(#6359fd));
+  background: linear-gradient(#6359fd, #6359fd);
+}
+.bg-secondary {
+  background: #6359fd;
+  background: -webkit-gradient(linear, left top, left bottom, from(#6359fd), to(#6359fd));
+  background: linear-gradient(#6359fd, #6359fd);
+}
+.text-primary {
+  color: #6359fd;
+}
+
+.btn-outline:hover, .btn-outline:focus, .btn-outline:active, .btn-outline.active {
+  color: white;
+  border-color: #6359fd;
+  background-color: #6359fd;
+}
+
