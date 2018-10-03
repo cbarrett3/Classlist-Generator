@@ -1,6 +1,6 @@
 /*highlighted color of menu option when scrolled to that option*/
 #mainNav .navbar-nav > li > a.active {
-  color: #6359fd !important;
+  color: #d03a38 !important;
   background-color: transparent;
 }
 
@@ -19,24 +19,25 @@
 
 /*main logo top left hover color on other pages*/
 #mainNav.navbar-shrink .navbar-brand:hover, #mainNav.navbar-shrink .navbar-brand:focus {
-    color: #6359fd;
+    color: #d03a38;
 }
 
+/*hover color of nav bar options when your not no the top page*/
 #mainNav.navbar-shrink .navbar-nav > li > a:hover, #mainNav.navbar-shrink .navbar-nav > li > a:focus:hover {
-    color: #6359fd;
+    color: #d03a38;
   }
 
 /*top page main logo top left color*/
 #mainNav .navbar-brand {
-  color: #ceccd7;
+  color: #ffffff;
 }
 
 section.cta {
   position: relative;
   padding: 250px 0;
-  background-image: url("../img/bright.jpg");
+  background-image: url("../img/whitepoly.jpg");
+  /*background-color: #f8f9fa;*/
 }
-
 
 section h3 {
   font-size: 40px;
@@ -46,34 +47,88 @@ section h3 {
 p {
   color: white;
 }
+
 a:hover, a:focus {
-  color: #6359fd;
+  color: #d03a38;
 }
 
 a {
-  color: #6359fd;
+  color: #d03a38;
   -webkit-transition: all .35s;
   transition: all .35s;
 }
 
 
 .bg-primary {
-  background: #6359fd;
-  background: -webkit-gradient(linear, left top, left bottom, from(#6359fd), to(#6359fd));
-  background: linear-gradient(#6359fd, #6359fd);
+  background: #d03a38;
+  background: -webkit-gradient(linear, left top, left bottom, from(#d03a38), to(#d03a38));
+  background: linear-gradient(#d03a38, #d03a38);
 }
 .bg-secondary {
-  background: #6359fd;
-  background: -webkit-gradient(linear, left top, left bottom, from(#6359fd), to(#6359fd));
-  background: linear-gradient(#6359fd, #6359fd);
+  background: #d03a38;
+  background: -webkit-gradient(linear, left top, left bottom, from(#d03a38), to(#d03a38));
+  background: linear-gradient(#d03a38, #d03a38);
 }
 .text-primary {
-  color: #6359fd;
+  color: #d03a38;
 }
 
 .btn-outline:hover, .btn-outline:focus, .btn-outline:active, .btn-outline.active {
   color: white;
-  border-color: #6359fd;
-  background-color: #6359fd;
+  border-color: #d03a38;
+  background-color: #d03a38;
 }
 
+
+/*this defines the pattern in the background of the top page*/
+header.masthead {
+  position: relative;
+  width: 100%;
+  padding-top: 150px;
+  padding-bottom: 100px;
+  color: white;
+  background: url("../img/bg-pattern.png"), #d03a38;
+  background: url("../img/bg-pattern.png"), -webkit-gradient(linear, right top, left top, from(#434246), to(#5cff84));
+  background: url("../img/bg-pattern.png"), linear-gradient(to left, #434246, #5cff84);
+}
+
+/*this defines the text on the top page*/
+header.masthead .header-content {
+  max-width: 500px;
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+header.masthead .header-content h1 {
+  font-size: 30px;
+}
+
+section.howItWorks h2 {
+    color: black;
+}
+
+section.howItWorks .container .col-md-12 mx-auto{
+    color: #000000;
+}
+
+
+section.howItWorks .container {
+    color: #ffffff;
+}
+
+/*the heart at the bottom in contact*/
+section.contact h2 i {
+  color: #000000;
+}
+section.howItWorks .badges .badge-link {
+  display: block;
+  margin-bottom: 25px;
+}
+
+section.howItWorks .badges .badge-link:last-child {
+  margin-bottom: 0;
+}
+
+section.howItWorks .badges .badge-link img {
+  height: 60px;
+}
