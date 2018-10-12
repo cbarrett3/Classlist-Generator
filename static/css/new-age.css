@@ -148,7 +148,7 @@ section h2 {
   }
   #mainNav.navbar-shrink .navbar-nav > li > a:hover,
   #mainNav.navbar-shrink .navbar-nav > li > a:focus:hover {
-    color: #6359fd;
+    color: #fdcc52;
   }
 }
 
@@ -202,38 +202,38 @@ header.masthead .device-container .screen img {
   }
 }
 
-section.howItWorks {
+section.download {
   position: relative;
   padding: 150px 0;
 }
 
-section.howItWorks h2 {
+section.download h2 {
   font-size: 50px;
   margin-top: 0;
 }
 
-section.howItWorks .badges .badge-link {
+section.download .badges .badge-link {
   display: block;
   margin-bottom: 25px;
 }
 
-section.howItWorks .badges .badge-link:last-child {
+section.download .badges .badge-link:last-child {
   margin-bottom: 0;
 }
 
-section.howItWorks .badges .badge-link img {
+section.download .badges .badge-link img {
   height: 60px;
 }
 
 @media (min-width: 768px) {
-  section.howItWorks .badges .badge-link {
+  section.download .badges .badge-link {
     display: inline-block;
     margin-bottom: 0;
   }
 }
 
 @media (min-width: 768px) {
-  section.howItWorks h2 {
+  section.download h2 {
     font-size: 70px;
   }
 }
@@ -436,3 +436,5 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
   font-size: 11px;
   padding: 15px 45px;
 }
+
+
