@@ -9,6 +9,7 @@ header.masthead {
   background: url("../img/bg-pattern.png"), linear-gradient(to left, #7b4397, #24dcbd) !important;
 }
 
+/*main logo on front page without hovering over it*/
 #mainNav .navbar-brand {
   color: #ffffff;
   font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
@@ -16,9 +17,39 @@ header.masthead {
   letter-spacing: 1px;
 }
 
+/*main logo on front page when you hover over it*/
 #mainNav .navbar-brand:hover, #mainNav .navbar-brand:focus {
-  color: #434246;
+  color: #ffffff;
 }
+
+/*highlighted menu option when on that page*/
+#mainNav .navbar-nav > li > a.active {
+  color: #8660fd !important;
+  background-color: transparent;
+}
+
+/*menu items hover color on main page*/
+#mainNav .navbar-nav > li > a:hover,
+#mainNav .navbar-nav > li > a:focus:hover {
+  color: #000000;
+}
+
+/*mouse over main logo when not on main page*/
+ #mainNav.navbar-shrink .navbar-brand:hover, #mainNav.navbar-shrink .navbar-brand:focus {
+    color: #434246;
+  }
+
+ /*menu options color when not on that page or hovering and not on main page*/
+  #mainNav.navbar-shrink .navbar-nav > li > a,
+  #mainNav.navbar-shrink .navbar-nav > li > a:focus {
+    color: #000000;
+  }
+
+  /*menu items when mouse over when scrolling*/
+  #mainNav.navbar-shrink .navbar-nav > li > a:hover,
+  #mainNav.navbar-shrink .navbar-nav > li > a:focus:hover {
+    color: #8660fd;
+  }
 
 
 .btn-outline:hover, .btn-outline:focus, .btn-outline:active, .btn-outline.active {
@@ -49,15 +80,16 @@ section.features .feature-item i {
 }
 
 section.howItWorks {
-  background: url("../img/bg-pattern.png"), #7b4397;
+  background: url("../img/bg-pattern.png"), #37ffcf;
   background: url("../img/bg-pattern.png"), -webkit-gradient(linear, right top, left top, from(#00BCD4), to(#673AB7));
-  background: url("../img/bg-pattern.png"), linear-gradient(to left, #8660fd, #5b49fd);
+  background: url("../img/bg-pattern.png"), linear-gradient(to bottom, #35bfc0, #8660fd);
 }
 
+
 .bg-primary {
-  background: url("../img/bg-pattern.png"), #7b4397;
+  background: url("../img/bg-pattern.png"), #37ffcf;
   background: url("../img/bg-pattern.png"), -webkit-gradient(linear, right top, left top, from(#00BCD4), to(#673AB7));
-  background: url("../img/bg-pattern.png"), linear-gradient(to bottom, #000000, #2e2d31);
+  background: url("../img/bg-pattern.png"), linear-gradient(to bottom, #000000, #000000);
 }
 
 
@@ -86,15 +118,24 @@ section.contact ul.list-social li.social-instagram a:hover {
 }
 
 section.howItWorks .section-heading {
-  margin-bottom: 170px;
+  /*distance between h2 and p*/
+   margin-bottom: 25px;
+
+    /*position: absolute;*/
+    /*top: 8px;*/
+    /*left: 16px;*/
 }
 
 section.howItWorks .section-heading h2 {
-  margin-top: 0;
+  /*margin-top: 0;*/
 }
 
 section.howItWorks .section-heading p {
-  margin-bottom: 0;
+    /*margin-bottom: 200%;*/
+}
+
+section.howItWorks .carousel-caption {
+    top: 2px;
 }
 
 .carousel-item {
