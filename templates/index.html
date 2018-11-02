@@ -28,7 +28,6 @@
     <link href="../static/css/changes.css" rel="stylesheet">
     <link href="../static/css/full-slider.css" rel="stylesheet">
 
-
   </head>
 
   <body id="page-top">
@@ -47,10 +46,16 @@
               <a class="nav-link js-scroll-trigger" href="#features">Features</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#howItWorks">How it works</a>
+{#                changed how it works to rubric#}
+              <a class="nav-link js-scroll-trigger" href="#howItWorks">Rubric</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#upload">Upload</a>
+{#                changed upload to how it works#}
+              <a class="nav-link js-scroll-trigger" href="#upload">How it Works</a>
+            </li>
+            <li class="nav-item">
+{#                #example will be the example and upload page#}
+              <a class="nav-link js-scroll-trigger" href="#example">Upload</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
@@ -311,22 +316,23 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 mx-auto">
-                        <h2 class="section-heading text-center">Upload</h2>
-                        <p class="text-muted text-center">Download and fill out this Excel template <br>
+                        <h2 class="section-heading text-center">Three Simple Steps</h2>
+                        <p class="text-muted text-center">You have the data, we have the algorithm <br>
                         </p>
                         <hr>
-                        <p class="text-muted text-left">Directions: <br>
+                        <p class="text-muted text-left">
+                            <strong> Directions: <br> </strong>
                         </p>
                                 <p class="text-sm-left">
-                                1. One teacher representative in a grade level is responsible for uploading this completed template<br>
-                                2. The completed template should include information about every student moving to the next grade level<br>
-                                    Pro Tip: Have each teacher download and fill out this template, and have the teacher representative merge these and upload.<br>
-                                3. After uploading and submitting, generated classlists will be available in an easily downloadable and shareable Excel spreadsheet.<br>
+                                1. One teacher representative in your grade level is responsible for uploading a completed template.<br> <br>
+                                2. The completed template should include information about every student moving to the next grade level.<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;  <strong>  Pro Tip:  </strong> Have each teacher download and fill out this template, and have the teacher representative merge these and upload.<br> <br>
+                                3. After uploading and submitting, your generated classlists will be available in an easily downloadable and shareable Excel    spreadsheet.<br>
                                 <br>
                                 </p>
-                            <p class="text-left">
-                            Example format:
-                            </p>
+{#                            <p class="text-left">#}
+{#                            <strong>Excel Spreadsheet Format:</strong>#}
+{#                            </p>#}
                         <div class="badges">
 {#                      <a class="badge-link" href="#"><img src="../static/img/google-play-badge.svg" alt=""></a>#}
 {#                      <a class="badge-link" href="#"><img src="../static/img/app-store-badge.svg" alt=""></a>#}
@@ -334,8 +340,54 @@
                     </div>
                 </div>
             </div>
+
+{#        this is the area to add the upload button#}
+{#            <a class="ct-btn-scroll ct-js-btn-scroll" href="#example"><img alt="Arrow Down Icon" src="https://www.solodev.com/assets/anchor/arrow-down.png"></a>#}
+{#            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">#}
+{#            <script src="../static/js/scroll-down.js"></script>#}
+
     </section>
 
+
+    <section class="example" id="example">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 mx-auto">
+                        <h2 class="section-heading text-center"> Excel Spreadsheet Format: </h2>
+                        <p class="text-muted text-center">Download and fill out this Excel template <br>
+                        </p>
+                        <hr>
+                    </div>
+                </div>
+                    <img class="excel" src="../static/img/GradelistTemplate.jpg" alt="">
+            </div>
+{#        <input type="button" value="Download!">#}
+{#        <button>Download!</button>#}
+{#        <button class="btn btn-1 btn-1e">Button</button>#}
+{#        <a href="#" role="button">Download Template</a>#}
+        <a href="#" class="download_button">
+         <div class="downloadicon">
+        <div class="cloud"><div class="arrowdown"></div></div>
+         </div>
+        <div class="filename">Download Template</div>
+        </a>
+                    <div class="container">
+                <div class="row">
+                    <div class="col-md-12 mx-auto">
+                        <h2 class="section-heading text-center">. <br>. <br> </h2>
+{#                        <p class="text-center">Please follow the example format exactly#}
+{#                        </p>#}
+                        <hr>
+                                <a href="#" class="upload_button">
+                                <div class="uploadicon">
+                                <div class="cloud"><div class="arrowup"></div></div>
+                                </div>
+                                <div class="filename">Upload Completed Spreadsheet</div>
+                                </a>
+                    </div>
+                </div>
+            </div>
+    </section>
 
     <section class="contact bg-primary" id="contact">
       <div class="container">

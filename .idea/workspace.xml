@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b6a341de-3db0-4c03-9767-63e5a950f187" name="Default Changelist" comment="Added Bootstrap index.html Template and changed endpoints">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/changes.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/changes.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
@@ -13,30 +14,30 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/ClasslistGener8r$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1541097992012" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ClasslistGener8r$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1541177473918" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ClasslistGener8r$ClasslistGener8r.coverage" NAME="ClasslistGener8r Coverage Results" MODIFIED="1538149983930" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-1727047660">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="8" />
+          <entry key="project.closed" value="9" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="2" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.2" value="2" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.open.time.8" value="1" />
+          <entry key="project.open.time.8" value="2" />
           <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="10" />
+          <entry key="project.opened" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="25" />
           <entry key="html" value="11" />
-          <entry key="jpg" value="16" />
-          <entry key="js" value="11" />
+          <entry key="jpg" value="18" />
+          <entry key="js" value="12" />
           <entry key="md" value="2" />
           <entry key="png" value="24" />
           <entry key="py" value="1" />
@@ -48,8 +49,8 @@
         <counts>
           <entry key="CSS" value="25" />
           <entry key="HTML" value="11" />
-          <entry key="Image" value="40" />
-          <entry key="JavaScript" value="11" />
+          <entry key="Image" value="42" />
+          <entry key="JavaScript" value="12" />
           <entry key="Markdown" value="2" />
           <entry key="Python" value="1" />
           <entry key="SCSS" value="37" />
@@ -59,19 +60,19 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="45" />
-          <entry key="css" value="2386" />
-          <entry key="html" value="7284" />
-          <entry key="py" value="205" />
+          <entry key="css" value="3137" />
+          <entry key="html" value="8381" />
+          <entry key="py" value="351" />
           <entry key="scss" value="154" />
           <entry key="txt" value="63" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="2386" />
-          <entry key="HTML" value="7284" />
+          <entry key="CSS" value="3137" />
+          <entry key="HTML" value="8381" />
           <entry key="PLAIN_TEXT" value="63" />
-          <entry key="Python" value="250" />
+          <entry key="Python" value="396" />
           <entry key="SCSS" value="154" />
         </counts>
       </usages-collector>
@@ -85,26 +86,38 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="9" selection-start-column="9" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="325" column="36" lean-forward="true" selection-start-line="325" selection-start-column="36" selection-end-line="325" selection-end-column="36" />
+            <state relative-caret-position="105">
+              <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-501">
+              <caret line="368" column="28" selection-start-line="368" selection-start-column="28" selection-end-line="368" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/css/changes.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="129" column="20" selection-start-line="129" selection-start-column="20" selection-end-line="129" selection-end-column="20" />
+            <state relative-caret-position="203">
+              <caret line="343" column="21" lean-forward="true" selection-start-line="343" selection-start-column="21" selection-end-line="343" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/css/new-age.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -118,15 +131,6 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/css/new-age.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4014">
-              <caret line="141" column="1" selection-start-line="141" selection-start-column="1" selection-end-line="152" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -134,26 +138,13 @@
       <list>
         <option value="Flask Main" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>toggler</find>
-      <find>primary</find>
-      <find>bg-</find>
-      <find>vendo</find>
-      <find>vendor</find>
-      <find>mainNav</find>
-      <find>brand</find>
-      <find>img</find>
-      <find>cta</find>
-      <find>down</find>
-      <find>nav</find>
-      <find>mock</find>
-      <find>badges</find>
       <find>center</find>
-      <find>howitworks</find>
       <find>feature</find>
       <find>masthead</find>
       <find>col-md</find>
@@ -162,13 +153,27 @@
       <find>container</find>
       <find>features</find>
       <find>outline</find>
-      <find>navbar</find>
-      <find>h2</find>
       <find>hr</find>
       <find>section.fea</find>
       <find>more features</find>
       <find>car</find>
+      <find>contact</find>
+      <find>img</find>
+      <find>bg-primary</find>
+      <find>masthead1</find>
+      <find>howitworks</find>
+      <find>caro</find>
       <find>section-head</find>
+      <find>h2</find>
+      <find>hover</find>
+      <find>download</find>
+      <find>featu</find>
+      <find>example</find>
+      <find>a</find>
+      <find>navbar</find>
+      <find>arrowdown</find>
+      <find>downloadicon</find>
+      <find>filename</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -184,7 +189,6 @@
       <list>
         <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/templates/404.html" />
-        <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/static/css/grayscale.min.css" />
         <option value="$PROJECT_DIR$/static/scss/_cta.scss" />
         <option value="$PROJECT_DIR$/static/scss/_navbar.scss" />
@@ -198,8 +202,10 @@
         <option value="$PROJECT_DIR$/static/css/custom.css" />
         <option value="$PROJECT_DIR$/static/css/new-age.css" />
         <option value="$PROJECT_DIR$/static/css/full-slider.css" />
-        <option value="$PROJECT_DIR$/static/css/changes.css" />
+        <option value="$PROJECT_DIR$/static/js/scroll-down.js" />
+        <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/static/css/changes.css" />
       </list>
     </option>
   </component>
@@ -215,7 +221,7 @@
       <path value="$PROJECT_DIR$/static/vendor/fontawesome-free/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
     <option name="width" value="1280" />
     <option name="height" value="777" />
@@ -243,40 +249,7 @@
               <item name="ClasslistGener8r" type="b2602c69:ProjectViewProjectNode" />
               <item name="ClasslistGener8r" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ClasslistGener8r" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ClasslistGener8r" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-              <item name="new-age.css" type="620a8d5e:NestingTreeNode" />
-            </path>
-            <path>
-              <item name="ClasslistGener8r" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ClasslistGener8r" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ClasslistGener8r" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ClasslistGener8r" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="simple-line-icons" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ClasslistGener8r" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ClasslistGener8r" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="simple-line-icons" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ClasslistGener8r" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ClasslistGener8r" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -290,20 +263,20 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/static/css" />
-      <recent name="$PROJECT_DIR$/templates" />
-      <recent name="$PROJECT_DIR$/static/img" />
-      <recent name="$PROJECT_DIR$/static" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/templates" />
       <recent name="$PROJECT_DIR$/static" />
       <recent name="$PROJECT_DIR$/static/scss" />
       <recent name="$PROJECT_DIR$/static/img" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/img" />
+      <recent name="$PROJECT_DIR$/static/css" />
+      <recent name="$PROJECT_DIR$/templates" />
+      <recent name="$PROJECT_DIR$/static" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -393,13 +366,13 @@
     <frame x="0" y="23" width="1280" height="777" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49708456" visible="true" weight="0.13166398" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49708456" visible="true" weight="0.14216478" />
       <window_info id="Structure" order="1" sideWeight="0.50291544" side_tool="true" weight="0.16478191" />
       <window_info id="Favorites" order="2" sideWeight="0.50291544" side_tool="true" weight="0.16478191" />
       <window_info anchor="bottom" id="Concurrent Activities Diagram" order="0" weight="0.32944608" />
       <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.32944608" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.21167883" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32846716" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.15766424" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -616,19 +589,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="9" selection-start-column="9" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/new-age.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4014">
-          <caret line="141" column="1" selection-start-line="141" selection-start-column="1" selection-end-line="152" selection-end-column="1" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/static/img/GradelistTemplate.jpg">
+      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/static/css/full-slider.css">
       <provider selected="true" editor-type-id="text-editor">
@@ -637,17 +599,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/changes.css">
+    <entry file="file://$PROJECT_DIR$/static/js/scroll-down.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="129" column="20" selection-start-line="129" selection-start-column="20" selection-end-line="129" selection-end-column="20" />
+        <state relative-caret-position="180">
+          <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/new-age.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="325" column="36" lean-forward="true" selection-start-line="325" selection-start-column="36" selection-end-line="325" selection-end-column="36" />
+        <state relative-caret-position="-501">
+          <caret line="368" column="28" selection-start-line="368" selection-start-column="28" selection-end-line="368" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/changes.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="343" column="21" lean-forward="true" selection-start-line="343" selection-start-column="21" selection-end-line="343" selection-end-column="21" />
         </state>
       </provider>
     </entry>
