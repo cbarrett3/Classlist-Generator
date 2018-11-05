@@ -189,7 +189,7 @@ section.example .section-heading {
 section.example {
   background: url("../img/bg-pattern.png"), #37ffcf;
   background: url("../img/bg-pattern.png"), -webkit-gradient(linear, right top, left top, from(#00BCD4), to(#673AB7));
-  background: url("../img/bg-pattern.png"), linear-gradient(to bottom, #434246, #000000);
+  background: url("../img/bg-pattern.png"), linear-gradient(to bottom, #35bfc0, #8660fd);
 }
 
 section.example h2 {
@@ -547,5 +547,11 @@ background: -ms-linear-gradient(top, #000000 0%, #ffffff 100%); /* IE10+ */
 background: linear-gradient(to bottom, #8660fd 0%, #37ffcf 100%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aedb3d', endColorstr='#9fcb31',GradientType=0 ); /* IE6-9 */
 
+}
+
+.ImageBorder
+{
+    border-width: 10px;
+    border-color: Black;
 }
 
