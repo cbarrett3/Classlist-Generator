@@ -2,7 +2,6 @@
 <html lang="en">
 
   <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -276,36 +275,44 @@
             </div>
 
 
-        <a href="#" class="download_button">
-            <input type="submit" name="download_button" value="Download Template">
-{#            <form action="{{ url_for('index') }}" method="get">#}
-{#            </form>#}
-            <div class="downloadicon">
-                <div class="cloud">
-                    <div class="arrowdown"></div>
-                </div>
+{#        this href link goes to app.py and triggers the send_file operation#}
+        <a href="/return-file/" class="download_button">
+            <div class="section-heading text-center" align="left">
             </div>
+                <div class="downloadicon">
+                    <div class="cloud">
+                        <div class="arrowdown"></div>
+                    </div>
+                </div>
             <div class="filename">Download Template</div>
         </a>
+
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 mx-auto">
                         <h2 class="section-heading text-center">. <br>. <br> </h2>
-{#                        <p class="text-center">Please follow the example format exactly#}
 {#                        </p>#}
-                         <a href="#" class="upload_button">
-{#                            <form action="{{ url_for('index') }}" method="post">#}
-{#                                {{ upload_form.file }}#}
-{#                            </form>#}
-                            <div class="uploadicon">
-                                <div class="cloud">
-                                    <div class="arrowup">
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="filename">Upload Completed Spreadsheet</div>
-                          </a>
+                        <form method = "POST" enctype = "multipart/form-data" class="section-heading text-center">
+                            <input type = "file" name = "upload">
+                            <input type = "submit" name = "up">
+                        </form>
+{#                          <a href="#" class="upload_button">#}
+{#                            <div class="uploadicon">#}
+{#                                <div class="cloud">#}
+{#                                    <div class="arrowup">#}
+{##}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                            <div class="filename">Upload Completed Spreadsheet#}
+{##}
+{#                            </div>#}
+{##}
+{#                          </a>#}
+{#                        <form method = "POST" action="#" class="example">#}
+{#                        <input type="file" name = "spreadsheet">#}
+{#                            <input type = "submit">#}
+{#                        </form>#}
                     </div>
                 </div>
             </div>

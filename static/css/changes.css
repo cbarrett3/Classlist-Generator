@@ -555,3 +555,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aedb3d', end
     border-color: Black;
 }
 
+form.example input {
+    /*background: url(pix/input_boxes.gif) no-repeat 0 -58px;*/
+    border: none;
+    width: 241px;
+    height: 20px;
+    padding-left: 3px;
+    padding-top: 3px;
+}
