@@ -74,39 +74,10 @@
             </div>
           </div>
           <div class="col-lg-5 my-auto">
-{#            <div class="device-container">#}
-{#              <div class="device-mockup iphone6_plus portrait white">#}
-{#                <div class="device">#}
-{#                  <div class="screen">#}
-{#                    <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->#}
-{#                    <img src="../static/img/demo-screen-1.jpg" class="img-fluid" alt="">#}
-{#                  </div>#}
-{#                  <div class="button">#}
-{#                    <!-- You can hook the "home button" to some JavaScript events or just remove it -->#}
-{#                  </div>#}
-{#                </div>#}
-{#              </div>#}
-{#            </div>#}
           </div>
         </div>
       </div>
     </header>
-
-{#    <section class="download bg-primary text-center" id="download">#}
-{#      <div class="container">#}
-{#        <div class="row">#}
-{#          <div class="col-md-8 mx-auto">#}
-{#            <h2 class="section-heading">Discover what all the buzz is about!</h2>#}
-{#            <p>Our app is available on any mobile device! Download now to get started!</p>#}
-{#            <div class="badges">#}
-{#              <a class="badge-link" href="#"><img src="../static/img/google-play-badge.svg" alt=""></a>#}
-{#              <a class="badge-link" href="#"><img src="../static/img/app-store-badge.svg" alt=""></a>#}
-{#            </div>#}
-{#          </div>#}
-{#        </div>#}
-{#      </div>#}
-{#    </section>#}
-
     <section class="features" id="features">
       <div class="container">
         <div class="section-heading text-center">
@@ -242,22 +213,11 @@
                                 3. After uploading and submitting, your generated classlists will be available in an easily downloadable and shareable Excel    spreadsheet.<br>
                                 <br>
                                 </p>
-{#                            <p class="text-left">#}
-{#                            <strong>Excel Spreadsheet Format:</strong>#}
-{#                            </p>#}
                         <div class="badges">
-{#                      <a class="badge-link" href="#"><img src="../static/img/google-play-badge.svg" alt=""></a>#}
-{#                      <a class="badge-link" href="#"><img src="../static/img/app-store-badge.svg" alt=""></a>#}
                         </div>
                     </div>
                 </div>
             </div>
-
-{#        this is the area to add the upload button#}
-{#            <a class="ct-btn-scroll ct-js-btn-scroll" href="#example"><img alt="Arrow Down Icon" src="https://www.solodev.com/assets/anchor/arrow-down.png"></a>#}
-{#            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">#}
-{#            <script src="../static/js/scroll-down.js"></script>#}
-
     </section>
 
 
@@ -277,42 +237,60 @@
 
 {#        this href link goes to app.py and triggers the send_file operation#}
         <a href="/return-file/" class="download_button">
-            <div class="section-heading text-center" align="left">
+
+{#            the submitted id here is because this is where we want to scroll when submit is clicked#}
+            <div id="submitted" class="section-heading text-center" align="left">
             </div>
-                <div class="downloadicon">
-                    <div class="cloud">
-                        <div class="arrowdown"></div>
-                    </div>
-                </div>
+{#                <div class="downloadicon">#}
+{#                    <div class="cloud">#}
+{#                        <div class="arrowdown"></div>#}
+{#                    </div>#}
+{#                </div>#}
             <div class="filename">Download Template</div>
         </a>
 
             <div class="container">
+
+                {# javascript that helps us scroll to the right place when submit is clicked#}
+                {% if scroll %}
+                    <script>
+                        document.getElementById('{{ scroll }}').scrollIntoView();
+                        // or
+                        document.location.hash = '#' + '{{ scroll }}';
+                    </script>
+                {% endif %}
                 <div class="row">
                     <div class="col-md-12 mx-auto">
-                        <h2 class="section-heading text-center">. <br>. <br> </h2>
-{#                        </p>#}
+                        <h2 class="section-heading text-center"> <br> <br> </h2>
+
+                        {# accept field makes it only allow excel documents#}
                         <form method = "POST" enctype = "multipart/form-data" class="section-heading text-center">
-                            <input type = "file" name = "upload">
-                            <input type = "submit" name = "up">
+                            <img class="stick" src="../static/img/stick.png">
+
+                            <button class="btn btn-dark">
+                                <input type = "file" name = "upload" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel">
+                                <input type = "submit" name = "up">
+                            </button>
+                            {% with messages = get_flashed_messages() %}
+                                {% if messages %}
+                                    {% for message in messages %}
+                                        <h4>{{  message }}</h4>
+                                     {% endfor %}
+                                 {% endif %}
+                            {% endwith %}
+
                         </form>
-{#                          <a href="#" class="upload_button">#}
+
+{#                          <a href="/" class="upload_button">#}
 {#                            <div class="uploadicon">#}
 {#                                <div class="cloud">#}
 {#                                    <div class="arrowup">#}
-{##}
 {#                                    </div>#}
 {#                                </div>#}
 {#                            </div>#}
 {#                            <div class="filename">Upload Completed Spreadsheet#}
-{##}
 {#                            </div>#}
-{##}
 {#                          </a>#}
-{#                        <form method = "POST" action="#" class="example">#}
-{#                        <input type="file" name = "spreadsheet">#}
-{#                            <input type = "submit">#}
-{#                        </form>#}
                     </div>
                 </div>
             </div>
@@ -321,7 +299,6 @@
     <section class="contact bg-primary" id="contact">
       <div class="container">
         <h2 style="color:whitesmoke">Spread the Word!</h2>
-{#          <i class="fas fa-heart"></i>#}
         <ul class="list-inline list-social">
           <li class="list-inline-item social-twitter">
             <a href="#">

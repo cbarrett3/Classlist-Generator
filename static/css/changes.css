@@ -165,6 +165,16 @@ section.example .container .excel {
             max-width: 100%;
             max-height: 100vh;
             margin: auto;
+            margin-top: 0px;
+}
+section.example .container .stick {
+            max-width: 20%;
+            max-height: 100vh;
+            /*margin: auto;*/
+            margin-left: 0px;
+            margin-right: 50px;
+            margin-bottom:0px;
+
 }
 
 section.example .section-heading {
@@ -199,11 +209,13 @@ section.example h2 {
 
 .download_button {
   margin: 0 auto;
-  margin-top: 40px;
+  margin-top: 70px;
   text-decoration: none;
   display: block;
-  width: 500px;
-  height: 100px;
+  /*width: 500px;*/
+  /*height: 100px;*/
+  width: 400px;
+  height: 80px;
   padding: 1px;
   border: 1px solid #37ffcf;
   -webkit-border-radius: 10px;
@@ -211,13 +223,13 @@ section.example h2 {
   border-radius: 10px;
   color: #ffffff;
   text-shadow: 0 0 15px #434246;
-  font-size: 16px;
+  font-size: 12px;
 }
 
 .download_button .filename {
-  font-size: 28px;
+  font-size: 22px;
   text-align: center;
-  margin-top: 15px;
+  margin-top: 20px;
 }
 .download_button .filesize {
   margin: 10px 20px 0;
