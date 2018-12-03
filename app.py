@@ -16,9 +16,16 @@ def index():
 		# if the submit button was clicked, render template at that same spot
 		return render_template('index.html', scroll='submitted')
 
-	# TODO: trigger email at this point to where the Classlists will be sent
-	# else render template to top of page (normal refresh)
+	# TODO: trigger email at this point to where the Classlists will be sent (after they are generated)
+
+	#  else render template to top of page (normal refresh)
 	return render_template('index.html')
+
+
+# def my_form_post():
+# 	text = request.form['text']
+# 	email = text.upper()
+# 	return render_template('index.html', scroll='submitted')
 
 
 # this handles saving the file into our uploads folder
