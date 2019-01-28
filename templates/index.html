@@ -248,7 +248,28 @@
 {#                </div>#}
             <div class="filename">Download Template</div>
         </a>
-
+        {#        this href link goes to app.py and triggers the send_file operation#}
+        <a class="email_form">
+            <div class="section-heading text-center" align="left"></div>
+            <div class="filename">Teacher Representative Email Address: </div>
+        </a>
+            <style>
+                        textarea {
+                        width: 20%;
+                        height: 30px;
+                        padding: 5px 5px;
+                        box-sizing: border-box;
+                        border: 4px solid #ccc;
+                        border-radius: 4px;
+                        background-color: #f8f8f8;
+                        font-size: 16px;
+                        resize: none;
+                        }
+            </style>
+            <form method="POST">
+                <textarea name="textbox"></textarea>
+                <button type="submit" name="submit">Submit</button>
+            </form>
             <div class="container">
 
                 {# javascript that helps us scroll to the right place when submit is clicked#}
@@ -262,7 +283,14 @@
                 <div class="row">
                     <div class="col-md-12 mx-auto">
                         <h2 class="section-heading text-center"> <br> <br> </h2>
+{#                    email stuff#}
 
+{#                            <button class="btn btn-dark">#}
+{#                                <form method="POST" class="section-heading text-center">#}
+{#                                    <input name="text">#}
+{#                                    <input type="submit">#}
+{#                                </form>#}
+{#                             </button>#}
                         {# accept field makes it only allow excel documents#}
                         <form method = "POST" enctype = "multipart/form-data" class="section-heading text-center">
                             <img class="stick" src="../static/img/stick.png">

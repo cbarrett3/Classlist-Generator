@@ -231,6 +231,7 @@ section.example h2 {
   text-align: center;
   margin-top: 20px;
 }
+
 .download_button .filesize {
   margin: 10px 20px 0;
 }
@@ -245,6 +246,11 @@ section.example h2 {
   margin: 10px;
   width: 140px;
   height: 90px;
+}
+.email_form .filename {
+  font-size: 22px;
+  text-align: center;
+  margin-top: 30px;
 }
 
 @-webkit-keyframes movedown {
