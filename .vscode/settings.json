@@ -1,4 +1,5 @@
 {
-    "python.pythonPath": "c:\\Users\\Connor\\Desktop\\ClasslistGener8r\\env\\Scripts\\python.exe",
-    "git.ignoreLimitWarning": true
+    "python.pythonPath": "c:\\Users\\conno\\Desktop\\ClasslistGener8r\\venv\\Scripts\\python.exe",
+"git.ignoreLimitWarning": true,
+    "editor.detectIndentation": false
 }
