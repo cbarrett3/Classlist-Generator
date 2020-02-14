@@ -4,7 +4,7 @@ Classlist Gener8r Web Application - built using Python, Flask and Jinja2 Templat
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install the necessary packages.
 
 ```bash
 pip install requirements.txt
