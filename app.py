@@ -46,29 +46,27 @@ def my_index_post():
         Email = request.form["Email"]
         # get school
         School = request.form["School"]
-        # file = request.form["file"]
-        # quick validation
+
+        # array to hold the keys of missing input(s)
         missing = list()
 
-        # validate form inputs
         for key, value, in request.form.items():
             if value == "":
                 missing.append(key)
         if missing:
             feedback = f"Missing fields for {', '.join(missing)}"
-            return render_template("index.html", feedback=feedback)
-        # return redirect(request.url)
+            return render_template("index.html", feedback=feedback, scroll='form')
 
         # get file
         file = request.files['file']
         # check file existence
         if file.filename == '':
             feedback = "No Selected File"
-            return render_template("index.html", feedback=feedback)
+            return render_template("index.html", feedback=feedback, scroll='form')
         # check file type
         elif allowed_file(file.filename) == False:
             feedback = "File Type Not Supported"
-            return render_template("index.html", feedback=feedback)
+            return render_template("index.html", feedback=feedback, scroll='form')
         # save file
         else:
             file.save('uploads/' + secure_filename(file.filename))
@@ -98,9 +96,9 @@ def my_index_post():
             # mail.send(msg)
             # print('file sent successfully')
             # if the submit button was clicked, render template at that same spot
-            return render_template('index.html', scroll='submitted')
+            return render_template('index.html', scroll='form')
     else:
-        return render_template("index.html")
+        return render_template("index.html", scroll='form')
     
     # Check for Email Address
     if "email" in request.form:

@@ -255,9 +255,13 @@
             <img class="excel" src="../static/img/GradelistTemplate.jpg" alt="" style='border:3px solid #000000'>
         </div>
         <!-- this href link goes to app.py and triggers the send_file operation -->
-        <a href="/download-template/" class="download_button">
+        <!-- <a href="/download-template/" class="download_button">
             <div class="filename">Download Template</div>
-        </a>
+        </a> -->
+        <br><br><br>
+        <div class="text-center">
+            <a href="/download-template/" class="btn btn-outline btn-xl">Download Template</a>
+        </div>
     </section>
 
 
@@ -301,10 +305,13 @@
                             <input type=file name=file>
                         </div>
                         <br>
-                        <button type="submit" class="btn btn--primary uppercase">Submit</button>
+                        <button type="submit" class="btn btn--primary uppercase" id="form">Submit</button>
                         {% if feedback %}
                         <p class="text-danger float-right">{{ feedback }}</p>
                         {% endif %}
+                        <script>
+                            document.getElementById('{{ scroll }}').scrollIntoView();
+                        </script>
                     </form>
                 </div>
             </div>

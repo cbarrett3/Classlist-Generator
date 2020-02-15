@@ -149,6 +149,7 @@ section.rubric .carousel-caption {
 .carousel-item {
   height: 68vh;
   min-height: 300px;
+  /* width: 100%; height: auto; */
   background: no-repeat center center scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -156,9 +157,11 @@ section.rubric .carousel-caption {
   background-size: cover;
 }
 .rubricpic {
-  margin-left: auto;
   display: block;
+  width: 100%; height: auto;
+  max-height: 60vh;
   margin-right: auto;
+  background-size: contain
 }
 
 
@@ -215,13 +218,12 @@ section.download h2 {
 
 .download_button {
   margin: 0 auto;
-  margin-top: 70px;
+  margin-top: 7vh;
   text-decoration: none;
   display: block;
-  /*width: 500px;*/
-  /*height: 100px;*/
-  width: 400px;
-  height: 80px;
+  height: 10vh;
+  width: 40vh;
+  /* width: 50%; */
   padding: 1px;
   border: 1px solid #ffffff;
   -webkit-border-radius: 10px;
@@ -672,13 +674,9 @@ a:hover {
 .btn {
   display: inline-block;
   background: transparent;
-  color: inherit;
   font: inherit;
-  border: 0;
-  outline: 0;
-  padding: 0;
+  border: 1;
   transition: all 200ms ease-in;
-  cursor: pointer;
 }
 .btn--primary {
   background: #7f8ff4;
