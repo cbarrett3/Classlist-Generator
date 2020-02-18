@@ -14,19 +14,33 @@ import pandas as pd
 import xlsxwriter
 import os
 
-# uploads settings
-UPLOAD_FOLDER = os.getcwd() + '/uploads'
-ALLOWED_EXTENSIONS = {'xlsx', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' }
-
-# Create Flask App
+# create flask app
 app = Flask(__name__, static_folder='static')
-#app.config.from_object('config.Config')
-dropzone = Dropzone(app)
+# use hardcoded string as environment variable for now
 app.secret_key = 'listenmoreoften'
-# Use hardcoded string as environment variable for now
+# use hardcoded string as environment variable for now
 app.config['SECRET_KEY'] = 'listenmoreoften'
-
+# use hardcoded location for now
+UPLOAD_FOLDER = os.getcwd() + '/uploads'
+# upload folder location (using system variable)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+# allowed extensions for uploaded file
+ALLOWED_EXTENSIONS = {'xlsx', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' }
+# mail settings
+mail_settings = {
+	"MAIL_SERVER": 'smtp.gmail.com',
+	"MAIL_PORT": 465,
+	"MAIL_USE_TLS": False,
+	"MAIL_USE_SSL": True,
+    # use environment variables later (and change to different email address)
+    "MAIL_DEFAULT_SENDER": "connor.steven.barrett@gmail.com",
+	"MAIL_USERNAME": "connor.steven.barrett@gmail.com",
+	"MAIL_PASSWORD": "mqyoprgoinmchzce"
+}
+# apply mail settings to app configuration
+app.config.update(mail_settings)
+# initialize mail instance
+mail = Mail(app)
 
 # Home Page (No Request)
 @app.route('/')
@@ -84,17 +98,17 @@ def my_index_post():
             filename = 'GeneratedClasslists.xlsx'
             # save cleaned df into an excel spreadsheet
             save_xls(generated_classlists, 'generated/' + filename)
-
-            # app.config.update(mail_settings)
-            # mail = Mail(app)
+            # send email
             # global address
-            # msg = Message(subject="Your Classlists are ready!", sender=app.config.get("MAIL_USERNAME"), recipients=[address], body="Attached are your classlists. Thanks again for using ClasslistGener8r!")
-            # # with app.open_resource('generated/' + filename) as fp:
-            # # 	msg.attach(filename, fp.read())
+
+            email = Message(subject="Your Balanced Classlists are Attatched!", sender=app.config.get("MAIL_USERNAME"), recipients=[Email], body="Thank you for using ClasslistGener8r!")
             # with app.open_resource('generated/' + filename) as fp:
-            # 	msg.attach('generated/' + filename, 'generated/' + filename, fp.read())
-            # mail.send(msg)
-            # print('file sent successfully')
+            # 	email.attach(filename, fp.read())
+            with app.open_resource('generated/' + filename) as fp:
+            	email.attach(filename, 'generated/' + filename, fp.read())
+            mail.send(email)
+            flash("Got it! Balanced Classlists will be Delivered within 10 Minutes!")
+            print('file should have sent')
             # if the submit button was clicked, render template at that same spot
             return render_template('index.html', scroll='form')
     else:
@@ -204,16 +218,6 @@ def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
-
-# Mail settings
-mail_settings = {
-	"MAIL_SERVER": 'smtp.gmail.com',
-	"MAIL_PORT": 465,
-	"MAIL_USE_TLS": False,
-	"MAIL_USE_SSL": True,
-	"MAIL_USERNAME": "connor.steven.barrett@gmail.com",
-	"MAIL_PASSWORD": "Trained10!"
-}
 
 if __name__ == '__main__':
 	app.run(debug=True)
