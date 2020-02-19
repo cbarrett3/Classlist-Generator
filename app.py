@@ -15,62 +15,53 @@ import xlsxwriter
 import os
 
 # create flask app
-app = Flask(__name__, static_folder='static')
-# use hardcoded string as environment variable for now
-app.secret_key = 'listenmoreoften'
-# use hardcoded string as environment variable for now
-app.config['SECRET_KEY'] = 'listenmoreoften'
-# use hardcoded location for now
+app = Flask(__name__, static_folder='static', instance_relative_config=True)
+# now we can access config variables via app.config['var_name']
+app.config.from_object('config')
+# now we can use secret variables from instance folders config.py
+app.config.from_pyfile('config.py')
+# get secret key from environment variable
+app.secret_key = app.config['SECRET_KEY']
+# upload folder location
 UPLOAD_FOLDER = os.getcwd() + '/uploads'
-# upload folder location (using system variable)
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 # allowed extensions for uploaded file
 ALLOWED_EXTENSIONS = {'xlsx', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' }
 # mail settings
-mail_settings = {
-	"MAIL_SERVER": 'smtp.gmail.com',
-	"MAIL_PORT": 465,
-	"MAIL_USE_TLS": False,
-	"MAIL_USE_SSL": True,
-    # use environment variables later (and change to different email address)
-    "MAIL_DEFAULT_SENDER": "connor.steven.barrett@gmail.com",
-	"MAIL_USERNAME": "connor.steven.barrett@gmail.com",
-	"MAIL_PASSWORD": "mqyoprgoinmchzce"
-}
-# apply mail settings to app configuration
-app.config.update(mail_settings)
+app.config.update(
+    MAIL_SERVER = 'smtp.gmail.com',
+    MAIL_PORT = 465,
+    MAIL_USE_TLS = False,
+    MAIL_USE_SSL = True,
+    MAIL_DEFAULT_SENDER = 'connor.steven.barrett@gmail.com',
+    MAIL_USERNAME = 'connor.steven.barrett@gmail.com',
+    MAIL_PASSWORD = app.config['MAIL_PASSWORD']
+)
 # initialize mail instance
 mail = Mail(app)
 
-# Home Page (No Request)
+# Home PageS
 @app.route('/')
 def index():
 	return render_template('index.html')
 
-# Home Page (GET or POST HTTP Request)
+# Home Page (POST HTTP Request)
 @app.route('/', methods=['POST'])
 def my_index_post():
-
     if request.method == "POST":
-        print(request.form)
-        print(request.files)
         # get name
         Name = request.form["Name"]
         # get email
         Email = request.form["Email"]
         # get school
         School = request.form["School"]
-
         # array to hold the keys of missing input(s)
         missing = list()
-
         for key, value, in request.form.items():
             if value == "":
                 missing.append(key)
         if missing:
             feedback = f"Missing fields for {', '.join(missing)}"
             return render_template("index.html", feedback=feedback, scroll='form')
-
         # get file
         file = request.files['file']
         # check file existence
@@ -99,92 +90,16 @@ def my_index_post():
             # save cleaned df into an excel spreadsheet
             save_xls(generated_classlists, 'generated/' + filename)
             # send email
-            # global address
-
             email = Message(subject="Your Balanced Classlists are Attatched!", sender=app.config.get("MAIL_USERNAME"), recipients=[Email], body="Thank you for using ClasslistGener8r!")
             # with app.open_resource('generated/' + filename) as fp:
             # 	email.attach(filename, fp.read())
             with app.open_resource('generated/' + filename) as fp:
             	email.attach(filename, 'generated/' + filename, fp.read())
             mail.send(email)
-            flash("Got it! Balanced Classlists will be Delivered within 10 Minutes!")
-            print('file should have sent')
-            # if the submit button was clicked, render template at that same spot
-            return render_template('index.html', scroll='form')
+            feedback = "Awesome! Thanks for your patience. Enjoy your classlists, and we'll see you next year!"
+            return render_template("index.html", feedback=feedback, scroll='form')
     else:
         return render_template("index.html", scroll='form')
-    
-    # Check for Email Address
-    if "email" in request.form:
-        address = request.form['email']
-        print(address)
-        flash("WE got your email, thanks!")
-        return render_template('/')
-		# if form.validate():
-			# Save the comment here.
-			# flash("Awesome! Thanks for your patience. Enjoy your classlists, and we'll see you next year!")
-		# else:
-		# 	flash('Please enter a valid email address.')
-	# Check for Uploaded File
-    if 'file' not in request.files:
-        flash('No file part')
-        return redirect('index.html')
-    # Grab the uploaded file
-    else:
-        file = request.files.get('file')
-		# Check for empty file submission
-        if file.filename == '':
-            flash('No selected file')
-            return redirect('index.html')
-		# Save file to upload folder
-        else:
-            if file and allowed_file(file.filename):
-                filename = secure_filename(file.filename)
-                file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-                flash("Awesome! Thanks for your patience. Enjoy your classlists, and we'll see you next year!")
-				# TEMP -- we'll add logic here
-                return render_template('index.html', scroll='submitted')
-            else:
-                return render_template('index.html')
-
-
-		# uploaded_file = request.files['upload']
-		# # save uploaded file into uploads folder
-		# uploaded_file.save('uploads/' + secure_filename(uploaded_file.filename))
-		# # call classlists creation method with uploaded file
-		# classlists = ClasslistCreation(secure_filename(uploaded_file.filename))
-		# # initiate early student placements
-		# early_classlists = classlists.early_placement()
-		# # initiate classlist generator
-		# generator = Generator(early_classlists, classlists.kids, classlists.num_students, classlists.num_teachers)
-		# # call the class generate method to generate classlists
-		# generated_classlists = generator.generate()
-		# # call method to get rid of columns we don't need
-		# generated_classlists = clean_up_dfs(generated_classlists)
-		# # create this as the file name
-		# filename = 'GeneratedClasslists.xlsx'
-		# # save cleaned df into an excel spreadsheet
-		# save_xls(generated_classlists, 'generated/' + filename)
-		# app.config.update(mail_settings)
-		# mail = Mail(app)
-		# global address
-		# msg = Message(subject="Your Classlists are ready!", sender=app.config.get("MAIL_USERNAME"), recipients=[address], body="Attached are your classlists. Thanks again for using ClasslistGener8r!")
-		# # with app.open_resource('generated/' + filename) as fp:
-		# # 	msg.attach(filename, fp.read())
-		# with app.open_resource('generated/' + filename) as fp:
-		# 	msg.attach('generated/' + filename, 'generated/' + filename, fp.read())
-		# mail.send(msg)
-		# print('file sent successfully')
-		# # if the submit button was clicked, render template at that same spot
-		# return render_template('index.html', scroll='submitted')
-
-	# save recipient email address to send email to
-	# recipient_address = request.form.get('textbox')
-	# # needed to modify global copy of address
-	# address = recipient_address
-	# flash("Got it! Check your inbox for the generated classlists within minutes after submitting the filled out template!")
-	# return render_template('index.html', scroll='submitted')
-
 
 # download template
 @app.route('/download-template/')
@@ -195,17 +110,20 @@ def return_file():
 # Save DF into Excel Spreadsheet
 def save_xls(dict_df, path):
 	writer = pd.ExcelWriter(path, engine='xlsxwriter')
-	for key, df in dict_df.items():  # loop through dictionary of df's
-		df.to_excel(writer, sheet_name=key, index=False, index_label=False, header=True)  # send df to writer
-		worksheet = writer.sheets[key]  # pull worksheet object
-		for idx, col in enumerate(df):  # loop through all columns
+    # loop through dictionary of df's
+	for key, df in dict_df.items():
+        # send df to writer
+		df.to_excel(writer, sheet_name=key, index=False, index_label=False, header=True)
+        # pull worksheet object
+		worksheet = writer.sheets[key]
+        # loop through all columns
+		for idx, col in enumerate(df):
 			series = df[col]
 			# adding a little more cushion space
 			max_len = max((series.astype(str).map(len).max(), len(str(series.name)))) + 1
 			# set column width
 			worksheet.set_column(idx, idx, max_len)
 	writer.save()
-
 
 def clean_up_dfs(dict_df):
 	# drops un-needed columns from kids
@@ -218,7 +136,5 @@ def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
-
 if __name__ == '__main__':
-	app.run(debug=True)
-
+	app.run()
