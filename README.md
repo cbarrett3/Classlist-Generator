@@ -1,7 +1,6 @@
 # Elementary School Class List Generator - V2 w/ Python
 
 ![Not Maintained](https://img.shields.io/badge/status-not%20maintained-red)
-[![Open Source](https://badgen.net/badge/Open%20Source/%E2%9C%93/blue?icon=github)](https://github.com/cbarrett3/classlist-generator-python)
 
 This was a second-go at the first ever side project I worked on, back in 2017. [The first version](https://github.com/cbarrett3/elementary-classlist-generator) was built with Java, about a year earlier. This project was inspired by my mother, who is a first grade teacher and has explained this problem time and time again to me. The objective of this project was to make elementary school teacher's lives easier at the end of the school year, when they are asked to recommend classlists to the principal for the following school year.
 
